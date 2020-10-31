@@ -1,0 +1,125 @@
+{
+	"name": "mark-toggle",
+	"displayName": "mark-toggle",
+	"description": "Emacs' style mark toggling",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "mark-toggle.toggle",
+				"title": "mark-toggle: Toggle"
+			},
+			{
+				"command": "mark-toggle.cursorRight",
+				"title": "mark-toggle: cursorRight"
+			},
+			{
+				"command": "mark-toggle.cursorLeft",
+				"title": "mark-toggle: cursorLeft"
+			},
+			{
+				"command": "mark-toggle.cursorUp",
+				"title": "mark-toggle: cursorUp"
+			},
+			{
+				"command": "mark-toggle.cursorDown",
+				"title": "mark-toggle: cursorDown"
+			},
+			{
+				"command": "mark-toggle.cursorWordLeft",
+				"title": "mark-toggle: cursorWordLeft"
+			},
+			{
+				"command": "mark-toggle.cursorWordRight",
+				"title": "mark-toggle: cursorWordRight"
+			},
+			{
+				"command": "mark-toggle.cursorTop",
+				"title": "mark-toggle: cursorTop"
+			},
+			{
+				"command": "mark-toggle.cursorBottom",
+				"title": "mark-toggle: cursorBottom"
+			},
+			{
+				"command": "mark-toggle.cursorWordStartLeft",
+				"title": "mark-toggle: cursorWordStartLeft"
+			},
+			{
+				"command": "mark-toggle.cursorWordStartRight",
+				"title": "mark-toggle: cursorWordStartRight"
+			},
+			{
+				"command": "mark-toggle.cursorEnd",
+				"title": "mark-toggle: cursorEnd"
+			},
+			{
+				"command": "mark-toggle.cursorLineEnd",
+				"title": "mark-toggle: cursorLineEnd"
+			},
+			{
+				"command": "mark-toggle.cursorPageUp",
+				"title": "mark-toggle: cursorPageUp"
+			},
+			{
+				"command": "mark-toggle.cursorPageDown",
+				"title": "mark-toggle: cursorPageDown"
+			},
+			{
+				"command": "mark-toggle.cursorWordEndRight",
+				"title": "mark-toggle: cursorWordEndRight"
+			},
+			{
+				"command": "mark-toggle.cursorWordEndLeft",
+				"title": "mark-toggle: cursorWordEndLeft"
+			},
+			{
+				"command": "mark-toggle.cursorWordPartLeft",
+				"title": "mark-toggle: cursorWordPartLeft"
+			},
+			{
+				"command": "mark-toggle.cursorWordPartRight",
+				"title": "mark-toggle: cursorWordPartRight"
+			},
+			{
+				"command": "mark-toggle.cursorAccessibilityLeft",
+				"title": "mark-toggle: cursorAccessibilityLeft"
+			},
+			{
+				"command": "mark-toggle.cursorAccessibilityRight",
+				"title": "mark-toggle: cursorAccessibilityRight"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.49.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	}
+}
