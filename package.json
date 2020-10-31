@@ -3,6 +3,20 @@
 	"displayName": "mark-toggle",
 	"description": "Emacs' style mark toggling",
 	"version": "0.0.1",
+	"publisher": "qdewaghe",
+	"repository": {
+		"url": "https://github.com/qdewaghe/vscode-mark-toggle",
+		"type": "git"
+	},
+	"bugs": {
+		"url": "https://github.com/qdewaghe/vscode-mark-toggle/issues"
+	},
+	"homepage": "https://github.com/qdewaghe/vscode-mark-toggle",
+	"keywords": [
+		"emacs",
+		"mark",
+		"toggle"
+	],
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -106,8 +120,7 @@
 		"compile": "tsc -p ./",
 		"lint": "eslint src --ext ts",
 		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
+		"pretest": "npm run compile && npm run lint"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.49.0",
