@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 
 
 let isMarkActive: boolean = false;
+let wasFirstActivated: boolean = false;
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -14,9 +15,11 @@ export function activate(context: vscode.ExtensionContext) {
 		if (!isMarkActive) {
 			createSelection(editor);
 			isMarkActive = true;
+			wasFirstActivated = true;
 		} else {
 			vscode.commands.executeCommand("cancelSelection");
 			isMarkActive = false;
+			wasFirstActivated = false;
 		}
 	});
 
@@ -59,11 +62,13 @@ function createCommand(commandName: string): vscode.Disposable {
 			return;
 		}
 
-		if (isMarkActive) {
+		if (isMarkActive && (wasFirstActivated || !editor.selection.isEmpty)) {
 			vscode.commands.executeCommand(commandName + "Select");
-			isMarkActive = true;
+			wasFirstActivated = false;
 		} else {
 			vscode.commands.executeCommand(commandName);
+			isMarkActive = false;
+			wasFirstActivated = false;
 		}
 	});
 }

@@ -2,7 +2,7 @@
 	"name": "mark-toggle",
 	"displayName": "mark-toggle",
 	"description": "Emacs' style mark toggling",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "qdewaghe",
 	"repository": {
 		"url": "https://github.com/qdewaghe/vscode-mark-toggle",
@@ -18,7 +18,7 @@
 		"toggle"
 	],
 	"engines": {
-		"vscode": "^1.49.0"
+		"vscode": "^1.51.1"
 	},
 	"categories": [
 		"Other"
