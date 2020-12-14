@@ -14,6 +14,7 @@ It also defines the following actions:
 - `mark-toggle.cursorBottom`
 - `mark-toggle.cursorEnd`
 - `mark-toggle.cursorHome`
+- `mark-toggle.cursorLineStart`
 - `mark-toggle.cursorLineEnd`
 - `mark-toggle.cursorPageUp`
 - `mark-toggle.cursorPageDown`
@@ -26,3 +27,5 @@ It also defines the following actions:
 
 Each of these command will chose between the Select and non-select versions in vscode depending on the state of the toggle.\
 e.g. `mark-toggle.cursorUp` will execute `cursorUp` if the toggle is off, otherwise it will execute `cursorUpSelect`.
+
+Does not support multi-cursors.

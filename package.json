@@ -2,7 +2,7 @@
 	"name": "mark-toggle",
 	"displayName": "mark-toggle",
 	"description": "Emacs' style mark toggling",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"publisher": "qdewaghe",
 	"repository": {
 		"url": "https://github.com/qdewaghe/vscode-mark-toggle",
@@ -76,6 +76,10 @@
 			{
 				"command": "mark-toggle.cursorEnd",
 				"title": "mark-toggle: cursorEnd"
+			},
+			{
+				"command": "mark-toggle.cursorLineStart",
+				"title": "mark-toggle: cursorLineStart"
 			},
 			{
 				"command": "mark-toggle.cursorLineEnd",
